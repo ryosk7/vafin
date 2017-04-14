@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <% @events.each do |event| %>
+        <p><%= event.title %></p>
+        <p><%= event.detail %></p>
+        <p><%= event.address %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+

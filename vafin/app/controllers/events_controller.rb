@@ -8,7 +8,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(event_param)
+    @event.user = @user
       if @event.save
         redirect_to @event
       else
@@ -22,5 +23,19 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+  end
+
+  private
+
+  def set_user
+    @user = User.find(current_user.id)
+  end
+
+  def set_studio
+    @studio = Studio.find(params[:id])
+  end
+
+  def event_param
+    params.require(:event).permit(:user_id, :title, :address, :start_time, :end_time, :detail, :admin_id)
   end
 end

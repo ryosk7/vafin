@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'admins/index'
+
+  get 'admins/show'
+
+  get 'admins/accept'
+
+  get 'admins/reject'
+
   get 'events', to: 'events#index'
 
   post 'events', to: 'events#create'

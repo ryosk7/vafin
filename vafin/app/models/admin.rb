@@ -1,3 +1,4 @@
 class Admin < ApplicationRecord
-  # has_many :events, class_name: Event, foreign_key: :event_id
+  has_many :events, dependent: :destroy
+  has_many :users
 end

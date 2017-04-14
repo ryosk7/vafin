@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  # belongs_to :admin
-  has_many :users
+  has_many :users, dependent: :destroy
+  belongs_to :admin
 end

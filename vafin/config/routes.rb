@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'joinings/index'
+
+  get 'joinings/new'
+
+  get 'joinings/create'
+
+  get 'joinings/show'
+
+  get 'joinings/destroy'
+
   get 'admins/index'
 
   get 'admins/show'

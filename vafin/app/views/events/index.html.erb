@@ -4,6 +4,9 @@
       <% @events.each do |event| %>
         <p><%= event.title %></p>
         <p><%= event.detail %></p>
+        <p><%= event.date%></p>
+        <p><%= event.start_time %></p>
+        <p><%= event.end_time %></p>
         <p><%= event.address %></p>
       <% end %>
     </div>

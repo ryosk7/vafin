@@ -46,3 +46,9 @@ Event.create!(
 ryo = User.create!(
   name: "Ryosuke"
   )
+
+# Joining.create!(
+#   event_date: 6,
+#   member: 3,
+#   status: "Joining"
+#   )

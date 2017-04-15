@@ -12,8 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'joinings/index'
-
   get 'users/new', to: 'users#new'
 
   post 'users', to: 'users#create'

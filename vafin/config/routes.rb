@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "events/admin_list", to: "events#admin_list"
 
-  resources :studios, only:[:index, :create, :show, :edit, :new] do
+  resources :events, only:[:index, :create, :show, :edit, :new] do
     resources :joinings, only:[:new, :create]
   end
 

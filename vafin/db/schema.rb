@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415015750) do
+ActiveRecord::Schema.define(version: 20170415070957) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "user_id"
@@ -52,12 +52,8 @@ ActiveRecord::Schema.define(version: 20170415015750) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "event_id"
-    t.integer  "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_users_on_admin_id"
-    t.index ["event_id"], name: "index_users_on_event_id"
   end
 
 end

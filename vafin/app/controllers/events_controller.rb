@@ -17,6 +17,10 @@ class EventsController < ApplicationController
       end
   end
 
+  def admin_list
+    @events = Studio.where(user_id: @user)
+  end
+
   def show
     @event = Event.find(params[:id])
   end

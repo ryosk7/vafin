@@ -25,6 +25,18 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def update
+    @event.update(event_param)
+    redirect_to event_admin_list_path
+  end
+
+  def destroy
+    @event.update(event_param)
+    redirect_to event_admin_list_path
+  end
+
+
+
   private
 
   def set_user

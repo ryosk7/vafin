@@ -1,31 +1,18 @@
 Rails.application.routes.draw do
+
+  resources :studios, only:[:index, :create, :show, :edit, :new] do
+    resources :joinings, only:[:new, :create]
+  end
+
+  resources :joinings, only:[:index, :show, :destroy]
+  resources :admins, only:[:index, :show] do
+    member do
+      patch :accept
+      patch :reject
+    end
+  end
+
   get 'joinings/index'
-
-  get 'joinings/new'
-
-  get 'joinings/create'
-
-  get 'joinings/show'
-
-  get 'joinings/destroy'
-
-  get 'admins/index'
-
-  get 'admins/show'
-
-  get 'admins/accept'
-
-  get 'admins/reject'
-
-  get 'events', to: 'events#index'
-
-  post 'events', to: 'events#create'
-
-  get 'events/:id', to: 'events#show'
-
-  get 'events/:id/edit', to: 'events#edit'
-
-  get 'events/new', to: 'events#new'
 
   get 'users/new', to: 'users#new'
 

@@ -9,12 +9,12 @@ class JoiningsController < ApplicationController
 
   def create
     @joining = Joining.new(joining_param)
-    @joining.event
+    @joining.event = @event
     @joining.user = @user
     @joining.admin = @admin
-    @joining.status = "Pending"
-    if @booking.save
-      redirect_to booking_path(booking)
+    # @joining.status = "Pending"
+    if @joining.save
+      redirect_to joining_path(joining)
     else
       render 'event/show'
     end

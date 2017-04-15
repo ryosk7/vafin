@@ -14,9 +14,9 @@ puts "looking for users studios..."
 Event.create!(
   title: "English and Japanese",
   address: "Shinjuku, Tokyo, Japan",
-  date: 3
-  start_time: 10
-  end_time: 0
+  date: 3,
+  start_time: 10,
+  end_time: 0,
   # price: 1000,
   detail: "Create new foreign frends and talk with English!",
   # capacity: 50
@@ -24,9 +24,9 @@ Event.create!(
 Event.create!(
   title: "Comic festival",
   address: "Shinjuku, Tokyo, Japan",
-  date: 12
-  start_time: 9
-  end_time: 0
+  date: 12,
+  start_time: 9,
+  end_time: 0,
   # price: 1000,
   detail: "Let's join and find nice mangas.",
   # capacity: 500
@@ -34,9 +34,9 @@ Event.create!(
 Event.create!(
   title: "Coffee and talking",
   address: "Shinjuku, Tokyo, Japan",
-  date: 5
-  start_time: 16
-  end_time: 0
+  date: 5,
+  start_time: 16,
+  end_time: 0,
   # price: 0,
   detail: "Lot's of coffee in here!",
   # capacity: 20

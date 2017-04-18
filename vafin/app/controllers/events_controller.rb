@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    @users = User.all
   end
 
   def new
@@ -17,8 +18,12 @@ class EventsController < ApplicationController
       end
   end
 
+  def match_time
+    @event = Event.find(params[:start_time])
+  end
+
   def admin_list
-    @events = Studio.where(user_id: @user)
+    @events = Event.where(user_id: @user)
   end
 
   def show
@@ -47,8 +52,8 @@ class EventsController < ApplicationController
     @user = User.find(current_user.id)
   end
 
-  def set_studio
-    @studio = Studio.find(params[:id])
+  def set_event
+    @studio = Event.find(params[:id])
   end
 
   def event_param

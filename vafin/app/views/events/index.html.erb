@@ -2,12 +2,25 @@
   <div class="row">
     <div class="card">
       <% @events.each do |event| %>
-        <p><%= event.title %></p>
-        <p><%= event.detail %></p>
-        <p><%= event.date%></p>
-        <p><%= event.start_time %></p>
-        <p><%= event.end_time %></p>
-        <p><%= event.address %></p>
+        <div class="add-event-card">
+          <div class="event">
+            <h2><%= link_to event.title, event_path(event) %></h2>
+            <p><%= event.detail %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="card">
+      <% @users.each do |user| %>
+        <% user.events.each do |event| %>
+        <div class="add-event-card">
+          <div class="event">
+            <h2><%= link_to event.title, event_path(event) %></h2>
+            <p><%= event.detail %></p>
+          </div>
+        </div>
+        <% end %>
       <% end %>
     </div>
   </div>

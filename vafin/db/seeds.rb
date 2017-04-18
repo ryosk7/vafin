@@ -17,38 +17,41 @@ event1 = Event.create!(
   address: "Shinjuku, Tokyo, Japan",
   date: 3,
   start_time: 10,
-  end_time: 0,
+  end_time: 00,
   # price: 1000,
   detail: "Create new foreign frends and talk with English!"
   # capacity: 50
   )
-Event.create!(
+event2 = Event.create!(
   title: "Comic festival",
   address: "Shinjuku, Tokyo, Japan",
   date: 12,
   start_time: 9,
-  end_time: 0,
+  end_time: 05,
   # price: 1000,
   detail: "Let's join and find nice mangas."
   # capacity: 500
   )
-Event.create!(
+event3 = Event.create!(
   title: "Coffee and talking",
   address: "Shinjuku, Tokyo, Japan",
   date: 5,
   start_time: 16,
-  end_time: 0,
+  end_time: 10,
   # price: 0,
   detail: "Lot's of coffee in here!"
   # capacity: 20
   )
 
 ryo = User.create!(
-  name: "Ryosuke"
+  name: "Ryosuke",
+
   )
 
-# Joining.create!(
-#   event_date: 6,
-#   member: 3,
-#   status: "Joining"
-#   )
+Joining.create!(
+  event: event1,
+  user: ryo,
+  event_date: 6,
+  member: 3,
+  status: "Joining"
+  )

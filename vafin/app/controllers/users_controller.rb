@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:id])
-    @user.event = @event
-    @user.joining = @joining
+    @user = User.new(user_param)
+    # @user.event = @event
+    # @user.joining = @joining
       if @user.save
         redirect_to @user
       else
@@ -15,12 +15,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(user_param)
   end
 
   private
 
   def user_param
-    params.require(:user).permit(:id)
+    params.require(:user).permit(:id, :name)
   end
 end

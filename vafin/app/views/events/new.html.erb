@@ -1,6 +1,15 @@
 <h1>event#new</h1>
 
 <%= form_for (@event) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <p><%= f.label :title %></p>
+  <p><%= f.text_field :title %></p>
+  <p><%= f.label :address %></p>
+  <p><%= f.text_field :address %></p>
+  <p><%= f.label :date %></p>
+  <p><%= f.text_field :date %></p>
+  <p><%= f.label :start_time %></p>
+  <p><%= f.text_field :start_time %> : <%= f.text_field :end_time %></p>
+  <p><%= f.label :detail %></p>
+  <p><%= f.text_field :detail %></p>
+  <p><%= f.submit %></p>
 <% end %>

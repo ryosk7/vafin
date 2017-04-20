@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_param)
-    # @user.event = @event
-    # @user.joining = @joining
+    @user.event = @event
+    @user.joining = @joining
       if @user.save
         redirect_to @user
       else

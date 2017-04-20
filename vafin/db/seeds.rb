@@ -45,7 +45,8 @@ event3 = Event.create!(
 
 ryo = User.create!(
   name: "Ryosuke",
-
+  email: "ryo@email.com",
+  password: "123456"
   )
 
 Joining.create!(
